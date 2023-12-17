@@ -22,6 +22,7 @@ def a_fazer():
 # Instanciamento
 
 app = QApplication(sys.argv)
+
 loader = QUiLoader()
 
 # Carregando arquivos de interface Qt Designer .ui
@@ -32,12 +33,15 @@ add_nova_tarefa = loader.load("ui_add_nova_tarefa.ui")
 # Comandos
 
 # Setando título
+'''
 titulo_main_window = "Kanban Board System"
 kanban_app.setWindowTitle(titulo_main_window)
 titulo_add_nova_tarefa = "Nova Tarefa"
 add_nova_tarefa.setWindowTitle(titulo_add_nova_tarefa)
-
-
+'''
+# Outra maneira de setar título
+kanban_app.setWindowTitle("Kanban Board System")
+add_nova_tarefa.setWindowTitle("Nova Tarefa")
 
 # Chamando janelas para execução
 kanban_app.show()
